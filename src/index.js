@@ -6,6 +6,7 @@ const convertRoute = require('./routes/convert');
 const toolsRoute = require('./routes/tools');
 const bookmarksRoute = require('./routes/bookmarks');
 const accountRoute = require('./routes/account');
+const premiumRoute = require('./routes/premium');
 
 const app = express();
 app.use(cors());
@@ -16,6 +17,7 @@ app.use('/', convertRoute);
 app.use('/', toolsRoute);
 app.use('/', bookmarksRoute);
 app.use('/', accountRoute);
+app.use('/', premiumRoute);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

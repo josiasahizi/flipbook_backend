@@ -1,4 +1,4 @@
-FROM node:20-slim
+FROM node:22-slim
 
 # Installe LibreOffice (conversion Word/PPT/TXT ↔ PDF), Poppler
 # (PDF → images), Calibre (EPUB → PDF) et Ghostscript (compression PDF)

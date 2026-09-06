@@ -7,12 +7,14 @@ const toolsRoute = require('./routes/tools');
 const bookmarksRoute = require('./routes/bookmarks');
 const accountRoute = require('./routes/account');
 const rewardsRoute = require('./routes/rewards');
+const legalRoute = require('./routes/legal');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
+app.use('/', legalRoute);
 app.use('/', convertRoute);
 app.use('/', toolsRoute);
 app.use('/', bookmarksRoute);
